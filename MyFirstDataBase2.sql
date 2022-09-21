@@ -42,9 +42,28 @@ Alter Table Menu Modify Price Decimal Not Null;
 update Menu set Price = "45.99" where Item_ID = 5;
 Update Customers Set Delivery_Info = "Hot Fuzz Ref" where Customer_ID = 6;
 
+Create Table Orders(
+Order_ID INT Unique Not Null Auto_Increment,
+Order_Date datetime Not Null,
+Cust_ID Int Not Null,
+Total_Order Decimal (6,2),
+Primary Key (Order_ID),
+Foreign Key (Cust_ID) References Customers(Customer_ID));
+
+Create Table Order_Items(
+Order_Items_ID INT Unique Not Null Auto_Increment,
+Ord_ID Int Not Null,
+It_ID Int Not Null,
+Total_Items Decimal (6,2),
+Primary Key (Order_Items_ID),
+Foreign Key (Ord_ID) References Orders(Order_ID),
+Foreign Key (It_ID) References Menu(Item_ID));
+
+
 Show Tables;
 Describe Customers;
 Describe Menu;
+Describe Order_Items;
+Describe Orders;
 Select * from Customers;
 Select * from Menu;
-
