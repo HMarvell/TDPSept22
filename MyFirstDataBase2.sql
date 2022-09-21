@@ -38,7 +38,7 @@ Insert into Customers ( Customer_Name, Email, Phone_Number, Address_1, Town_City
  Insert into Menu ( Item_Name, Item_Description, Allergens, Price, Calories, Availability) Values ( "Toast", "Bread toasted under the grill", "Gluten", 13.99, 120, True);
  Insert into Menu ( Item_Name, Item_Description, Allergens, Price, Calories, Availability) Values ( "The Jake", "Four Whole fried almost chickens and a coke", "Gluten, Sugar", 45.99, 2150, True);
 
-Alter Table Menu Modify Price Decimal Not Null;
+Alter Table Menu Modify Price Decimal(6,2) Not Null;
 update Menu set Price = "45.99" where Item_ID = 5;
 Update Customers Set Delivery_Info = "Hot Fuzz Ref" where Customer_ID = 6;
 
