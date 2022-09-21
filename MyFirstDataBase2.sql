@@ -59,6 +59,12 @@ Primary Key (Order_Items_ID),
 Foreign Key (Ord_ID) References Orders(Order_ID),
 Foreign Key (It_ID) References Menu(Item_ID));
 
+Insert into Orders (Order_Date, Cust_ID,Total_Order) Values ("2022/09/21 12:00", 1, 10.99);
+Insert into Orders (Order_Date, Cust_ID,Total_Order) Values ("2022/09/21 12:30", 3, 100.00),("2022/09/21 14:42", 5, 72.38);
+Insert into Orders (Order_Date, Cust_ID,Total_Order) Values ("2022/09/21 15:30", 6, 106.90),("2022/09/21 15:32", 1, 88.28);
+
+Insert Into Order_Items (Ord_ID, It_ID, Total_Items) Values (1, 3, 4);
+Insert Into Order_Items (Ord_ID, It_ID, Total_Items) Values (2, 2, 4),(3,4,2),(4,5,1),(5,1,3);
 
 Show Tables;
 Describe Customers;
@@ -67,3 +73,5 @@ Describe Order_Items;
 Describe Orders;
 Select * from Customers;
 Select * from Menu;
+Select * From Orders;
+Select * From Order_Items;
