@@ -12,13 +12,18 @@ const welcome = function(name,age,gender){
     welcome("Master Roshi",350,"A Hermit")
 
    
-let num3 = (100)
-let num4 = (10)
+let num1 = prompt("Please enter first number:");
+let num2 = prompt("Please enter second number:");
+
+let num3 = parseInt(num1)
+let num4 = parseInt(num2)
+
    function subCalc2(num3, num4) {
         return num3 - num4;
     }
     function subCalc3(num3, num4) {
-        return (num3 + num4)
+        let num5 = (num3 += num4)
+        return num5
     }
     function subCalc4(num3, num4) {
         return num3 / num4;
